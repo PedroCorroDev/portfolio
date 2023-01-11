@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedro Corro</title>
+    <script src="https://kit.fontawesome.com/926d45081f.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon.png">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Pacifico&display=swap" rel="stylesheet">    
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="../scripts/scripts.js"></script>
+</head>
+<body>  
+    <header>
+       <div class="barra contenedor relative">
+            <div class="menu-barra">
+                <div class="nombrelogosecundaria">
+                    <a href="index.html">
+                        PedroDev
+                    </a> 
+                </div> 
+            <div class="menu">
+                <a href="#nav">
+                    <i class="fa-solid fa-bars"></i> 
+                </a> 
+            </div>
+        </div>
+            <nav class="barra nav-secundarias" id="nav">
+                <a href="index.html" >
+                    Inicio
+                </a>
+                <a href="contacto.html">
+                   Sobre mi
+                </a>
+                <a href="galeria.html">
+                Proyectos
+                </a>
+                <a href="#" class="actual-page">
+                    Contacto
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-xmark"></i>
+                </a>
+            </nav>
+            <div>
+                <input type="checkbox" id="toggle-checkbox" class="toggle-checkbox">
+                <label for="toggle-checkbox" class="label">
+                    <i class="fa-solid fa-moon"></i>
+                    <i class="fa-solid fa-sun"></i>
+                    <i class="ball"></i>
+                </label>
+            </div>
+        </div> 
+    </header>
+
+    <main class="contenedor bg-color seccion">
+        <h2 class="fw-400 texto-centrado">Formulario</h2>
+
+        <form action="#" id="form">
+            <!--El formulario está dividido en fieldsets para no verse tan agrandado para los usuarios y que lo rellenen, si es muy grande da pereza y no lo usan-->
+            <fieldset> 
+                <legend>Información Personal</legend>
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" placeholder="Tu nombre" required>
+
+                <label for="surname">Apellidos:</label>
+                <input type="text" id="surname" placeholder="Tus apellidos" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" placeholder="Tu correo electrónico" required>
+
+                <label for="tele">Teléfono:</label>
+                <input type="tel" name="tele" id="tele" placeholder="Tu teléfono" required>
+
+                <label for="message">Solicite más información:</label>
+                <textarea name="message" id="message"></textarea>
+            </fieldset>
+            
+
+            <fieldset>
+                <legend>Contacto</legend>
+                <p class="parrafo-contacto">Como desea ser contactado:</p>     
+                <div class="forma-contacto">
+                    <label for="tel">Teléfono</label>
+                    <input type="radio" name="contacto" id="tel">
+                    <label for="correo">E-mail</label>
+                    <input type="radio" name="contacto" id="correo">
+                </div>
+                <p class="parrafo-contacto">Si escogió teléfono, elija fecha y hora: </p>
+                
+                <div class="forma-contacto">
+                    <label for="fecha">Fecha:</label>
+                    <input type="date" id="fecha">
+
+                    <label for="hora">Hora:</label>
+                    <input type="time" id="hora" min="09:00" max="18:00">
+                </div>
+                
+            
+            </fieldset>
+
+            <fieldset>
+                <legend>Servicios</legend>
+                <h2 class="parrafo-contacto">Servicios Disponibles</h2>     
+                <div class="servicios">
+                    <div class="carta-servicio" id="cajaserv1">
+                        <img src="https://i.ytimg.com/vi/XyFjHSyR5Go/maxresdefault.jpg" alt="Imagen de Página Web">
+                        <div class="contenido-servicio">
+                            <h3 id="titulo1">Página Única</h3>
+                            <p>Web que se desarrolla en una única página con diferentes secciones</p>
+                            <p class="precio" id="precio0">500€</p>
+                            <button class="boton-servicio" id="serv1">Escoger</button>
+                        </div>
+                    </div>
+                    <div class="carta-servicio" id="cajaserv2">
+                        <img src="https://websitesetup.org/wp-content/uploads/2020/12/Squarespace-web-design-software-December-2020.jpg" alt="Imagen de Página Web">
+                        <div class="contenido-servicio">
+                            <h3 id="titulo2">Web Múltiple</h3>
+                            <p>Web que contiene distintas páginas interrelacionadas</p>
+                            <p class="precio" id="precio1">1000€</p>
+                            <button class="boton-servicio" id="serv2">Escoger</button>
+                        </div>
+                    </div>
+                    <div class="carta-servicio" id="cajaserv3">
+                        <img src="https://wellaggio.com/wp-content/uploads/2019/07/Wellaggio-diseno-web-valencia-Co%CC%81mo-hacer-mantenimiento-de-tu-pagina-web-de-WordPress.jpg" alt="Imagen de Mantenimiento Web">
+                        <div class="contenido-servicio">
+                            <h3 id="titulo3">Mantenimiento Web</h3>
+                            <p>Servicio de mantenimiento y actualización de una página web</p>
+                            <p class="precio" id="precio2">750€</p>
+                            <button class="boton-servicio" id="serv3">Escoger</button>
+                        </div>
+                    </div>
+                </div>
+                <h2>Cesta</h2>
+                <p>Selección de servicios y extras</p>
+                <div>
+                    <div class="producto">
+                        <div class="producto-principal">
+                            <h3 id="servicioEscogido">&nbsp;</h3>
+                            <p id="precioServicio"></p>
+                        </div>
+                    </div>
+                    <div class="extras">
+                        <p>Posibles extras</p>
+                        <div id="conjuntoExtras">
+    
+                        </div>
+                    </div>
+                   
+                    <div class="marcador-plazo">
+                        <input type="number" name="tiempoPlazos" id="tiempoPlazos" required placeholder="Plazo" onchange="plazosPago(tiempoPlazos)">
+                        <select name="plazos" id="plazos" onchange="plazosPago(tiempoPlazos)">
+                            <option value="0">día/s</option>
+                            <option value="1">mes/es</option>
+                        </select>
+                    </div>
+                    <div class="marcador-precio">
+                        <p>
+                            Precio Total: <span id="total"></span>
+                        </p>
+                        <p>
+                            Precio Final con Descuento: <span id="totalDescuento"></span>
+                        </p>
+                    </div>    
+                </div>         
+                
+                <p class="parrafo-contacto">Política de Privacidad:</p>
+                <div class="politicas">
+                    <input type="checkbox" name="politicas" id="politicas" > 
+                    <p class="parrafo-politicas">He léido y acepto las políticas de privacidad.</p>
+                </div>
+            </fieldset>
+            <input type="button" value="Enviar" class="boton boton-azul boton-formulario" onclick="validation(document.getElementById('form'));">                
+        </form>
+    </main>
+
+    <footer>
+        <div class="logos-footer">
+            <a href="https://www.linkedin.com/in/pedro-corro-l%C3%B3pez-4102361a1/" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/PedroCorroDev" target="_blank">
+                <i class="fa-brands fa-square-github"></i>
+            </a>
+            <a href="https://codepen.io/pedrocorrodev" target="_blank">
+                <i class="fa-brands fa-codepen"></i>
+            </a>  
+        </div>
+       
+        <div>
+            <p>
+                <span> C:// San Miguel, nº 34</span>
+                <span> 12550, Almazora</span>
+                <span>Castellón, Comunidad Valenciana, España</span>
+            </p>
+        </div>
+        <span> &#169; Pedro Corro</span>
+    </footer>
+
+
+</body>
+</html>

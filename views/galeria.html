@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedro Corro</title>
+    <script src="https://kit.fontawesome.com/926d45081f.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon.png">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Pacifico&display=swap" rel="stylesheet">    
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>  
+    <script src="../scripts/libreria-dinamica.js"></script>
+  
+</head>
+<body>  
+    <header>
+       <div class="barra contenedor relative">
+            <div class="menu-barra">
+                <div class="nombrelogosecundaria">
+                    <a href="index.html">
+                        PedroDev
+                    </a> 
+                </div> 
+            <div class="menu">
+                <a href="#nav">
+                    <i class="fa-solid fa-bars"></i> 
+                </a> 
+            </div>
+        </div>
+            <nav class="barra nav-secundarias" id="nav">
+                <a href="index.html" >
+                    Inicio
+                </a>
+                <a href="contacto.html" >
+                   Sobre mi
+                </a>
+                <a href="#" class="actual-page">
+                Proyectos
+                </a>
+                <a href="presupuesto.html">
+                    Contacto
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-xmark"></i>
+                </a>
+            </nav>
+            <div>
+                <input type="checkbox" id="toggle-checkbox" class="toggle-checkbox">
+                <label for="toggle-checkbox" class="label">
+                    <i class="fa-solid fa-moon"></i>
+                    <i class="fa-solid fa-sun"></i>
+                    <i class="ball"></i>
+                </label>
+            </div>
+        </div> 
+    </header>
+
+    <main class="contenedor bg-color">
+        <section class="seccion seccion-galeria ">
+                <h2>
+                Galería de Proyectos
+                </h2>
+                <div class="parrafos-galeria">
+                    <p class="parrafo1">
+                        Os presento algunos de los proyectos realizados durante mi trayectoria de aprendizaje. 
+                    </p> 
+                    <p class="parrafo2">
+                        Esta es una pequeña muestra de algunos proyectos finales que he creado para consolidar el aprendizaje
+                        de los lenguajes y tecnologías. Trato de utilizar ejemplos reales para que las empresas podáis observar
+                        mi desempeño en proyectos cotidianos.
+                    </p>
+                    <p class="parrafo3">
+                        Todos los proyectos se actualizan cada cierto tiempo para mantenerlos actualiazados y ayudarme a refrescar
+                        los conocimientos que he consolidado con estos proyectos.
+                    </p>
+                </div>
+                <div class="centrar-slider">
+                    <div class="ventana-slider">
+                        <div class="slider" id="slider"></div>
+                        <div class="barra-controladores">
+                        <div>
+                            <input type="checkbox" id="playInterval" class="checkbox_interval">
+                            <label for="playInterval" class="fa-solid fa-pause" id="labelInterval"></label>
+                        </div>
+                        <div id="squaresSliders"></div>
+                        </div>
+                    </div>
+                </div> 
+         </section>
+    </main>
+  
+    <footer>
+        <div class="logos-footer">
+            <a href="https://www.linkedin.com/in/pedro-corro-l%C3%B3pez-4102361a1/" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/PedroCorroDev" target="_blank">
+                <i class="fa-brands fa-square-github"></i>
+            </a>
+            <a href="https://codepen.io/pedrocorrodev" target="_blank">
+                <i class="fa-brands fa-codepen"></i>
+            </a>  
+        </div>
+       
+        <div>
+            <p>
+                <span> C:// San Miguel, nº 34</span>
+                <span> 12550, Almazora</span>
+                <span>Castellón, Comunidad Valenciana, España</span>
+            </p>
+        </div>
+        <span> &#169; Pedro Corro</span>
+    </footer>
+
+
+</body>
+</html>

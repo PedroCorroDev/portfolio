@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedro Corro</title>
+    <script src="https://kit.fontawesome.com/926d45081f.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon.png">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Pacifico&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css">
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>   
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../scripts/scripts.js"></script>
+</head>
+<body>  
+    <header>
+       <div class="barra contenedor relative">
+            <div class="menu-barra">
+                <div class="nombrelogosecundaria">
+                    <a href="index.html">
+                        PedroDev
+                    </a> 
+                </div> 
+                <div class="menu">
+                    <a href="#nav">
+                        <i class="fa-solid fa-bars"></i> 
+                    </a> 
+                </div>
+            </div>
+            <nav class="barra nav-secundarias" id="nav">
+                <a href="index.html">
+                    Inicio
+                </a>
+                <a href="#" class="actual-page">
+                   Sobre mi
+                </a>
+                <a href="galeria.html">
+                    Proyectos
+                </a>
+                <a href="presupuesto.html">
+                    Contacto
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-xmark"></i>
+                </a>
+            </nav>
+            <div>
+                <input type="checkbox" id="toggle-checkbox" class="toggle-checkbox">
+                <label for="toggle-checkbox" class="label">
+                    <i class="fa-solid fa-moon"></i>
+                    <i class="fa-solid fa-sun"></i>
+                    <i class="ball"></i>
+                </label>
+            </div>
+        </div> 
+    </header>
+
+    <section class="contenedor bg-color sobre-contenedor">
+        <h2 class="texto-centrado titulo-blog">
+            Blog Personal
+        </h2>
+        <img src="../assets/img/fotoperfil1.png" class="sobre-foto" alt="Foto de Pedro Corro">
+        <div class="sobre-introduccion">
+            <p> Bienvenidos a la bitácora de mi desarrollo personal.</p>
+
+            <p>En esta página encontraréis información que os pueda interesar sobre mi, tanto artículos personales
+        como un diario de mis vivencias para aquel que esté interesado en conocer un poco mejor. </p>
+        
+            <p>Algunas de las entradas tratan asuntos personales y experiencias que me han ayudado a lo largo de la vida,
+        sobretodo aquellas que me han convertido en quien soy hoy en día.</p>
+
+            <p>Adentrate en aquellas que te parezcan más interesante y disfruta la lectura. Si quieres conocerme personalmente
+        visita mis redes sociales y contactame a través de la <a href="presupuesto.html" class="sobre-link">página de contacto</a>.</p>
+        </div>
+
+    </section>
+    <main class="contenedor bg-color sobre-entradas">
+        <h2>Entradas</h2>
+        <div class="about-cards">
+            <article class="carta">
+                <h3 class="titulo-carta relative">Diario</h3>
+                <span class="linea">Graduado en Magisterio. Siempre quise ayudar a otros, pero me di cuenta que no me hacía realmente feliz y no disfrutaba estudiando.
+                    Re-descubrí la programación, cuanto más me adentro más me entusiasma este mundo. 
+                </span>
+                <span class="more">
+                    <a href="#">
+                        <span>Leer más</span> 
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </span>
+            </article>
+            <article class="carta">
+                <h3 class="titulo-carta relative">Motivación</h3>
+                <span class="linea"> Durante la trayectoria escolar que ofrece el curriculum, cursé informática cada vez que tenía oportunidad.
+                    No descubrí que realmente me apasionaba hasta la universidad. Ahora quiero convertirme en Full Stack Developer, aunque estoy abierto a todas las posibilidades.
+                </span>
+                <span class="more">
+                    <a href="#">
+                        <span>Leer más</span> 
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </span>
+            </article>        
+            <article class="carta">
+                <h3 class="titulo-carta relative">Experiencia</h3>
+                <span class="linea"> He perfeccionado mis habilidades blandas trabajando en otros sectores y en mis estudios. A través 
+                    de los proyectos que estoy creando enseñaré mi experiencia con las nuevas tecnologías.
+                </span>
+                <span class="more">
+                    <a href="#">
+                        <span>Leer más</span> 
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </span>
+            </article>
+        </div>
+    </main>
+
+    <aside class="contenedor bg-color">
+        <div class="ubicacion">
+            <div class="mapa">
+              <div id="map"></div>
+              <input type="button" value="Localizar" class="boton boton-azul" onclick="navigator.geolocation.watchPosition(success, error);">
+           </div>
+            <div class="parrafo-ubicacion">
+                <p class="texto-ubicacion">
+                    Si estas entradas te han producido curiosidad a cerca de mi, puedes contactarme rellenando el formulario dentro de la sección de contacto.
+                </p>
+                <p class="texto-ubicacion">
+                    A continuación también dejo la ubicación donde se encuentra la oficina desde la que trabajo, si preferís una reunión personal pedid cita a través del formulario antes mencionado.
+                </p>
+                <a href="presupuesto.html">
+                    <div class="boton boton-azul boton-ubicacion">
+                        Formulario
+                    </div> 
+                </a>
+            </div>
+        </div>
+    </aside>
+
+    <footer>
+        <div class="logos-footer">
+            <a href="https://www.linkedin.com/in/pedro-corro-l%C3%B3pez-4102361a1/" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/PedroCorroDev" target="_blank">
+                <i class="fa-brands fa-square-github"></i>
+            </a>
+            <a href="https://codepen.io/pedrocorrodev" target="_blank">
+                <i class="fa-brands fa-codepen"></i>
+            </a>  
+        </div>
+       
+        <div>
+            <p>
+                <span> C:// San Miguel, nº 34</span>
+                <span> 12550, Almazora</span>
+                <span>Castellón, Comunidad Valenciana, España</span>
+            </p>
+        </div>
+        <span> &#169; Pedro Corro</span>
+    </footer>
+
+<script src="../scripts/leaflet-map.js"></script>
+</body>
+</html>
